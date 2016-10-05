@@ -16,17 +16,15 @@ public class MainActivity extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.textView2);
 
         btn2 = (Button)findViewById(R.id.button2);
-        btn2.setOnClickListener(new MyClass123());
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setText("567567");
+            }
+        });
 
     }
 
-    class MyClass123 implements View.OnClickListener {
-
-        @Override
-        public void onClick(View v) {
-            tv.setText("567567");
-        }
-    }
     public void click1(View v)
     {
         tv.setText("123123");
