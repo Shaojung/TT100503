@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tv;
+    TextView tv, tv3;
     Button btn2;
     ToggleButton tb;
     @Override
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.textView2);
+        tv3 = (TextView) findViewById(R.id.textView3);
         tb = (ToggleButton) findViewById(R.id.toggleButton);
         btn2 = (Button)findViewById(R.id.button2);
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -55,5 +56,13 @@ public class MainActivity extends AppCompatActivity {
         {
             tv.setText("BBB");
         }
+    }
+
+    public void click5(View v)
+    {
+        int c = Integer.valueOf(tv3.getText().toString());
+        c++;
+        tv3.setText(String.valueOf(c));
+
     }
 }
