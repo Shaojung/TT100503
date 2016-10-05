@@ -29,4 +29,15 @@ public class MainActivity extends AppCompatActivity {
     {
         tv.setText("123123");
     }
+    public void click3(View v)
+    {
+        if (v.getId() == R.id.button3)
+        {
+            tv.setText("AAA");
+        }
+        if (v.getId() == R.id.button4)
+        {
+            tv.setText("BBB");
+        }
+    }
 }
